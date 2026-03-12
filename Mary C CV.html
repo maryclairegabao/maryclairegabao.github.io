@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Claire G. Angot - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Calibri', 'Arial', sans-serif;
+        }
+        body {
+            background-color: #e6e9ef;
+            display: flex;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+        .resume {
+            max-width: 900px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 40px 45px;
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1e2b3a;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 30px;
+            background-color: #f0f3f8;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin: 15px 0 20px 0;
+            font-size: 15px;
+            color: #2c3e50;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .contact-item strong {
+            font-weight: 600;
+            min-width: 70px;
+        }
+        .summary {
+            background-color: #f9fafc;
+            padding: 18px 22px;
+            border-left: 5px solid #2c7da0;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1e2b3a;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1e3c4f;
+            border-bottom: 2px solid #a9c9e0;
+            padding-bottom: 6px;
+            margin: 30px 0 18px 0;
+            letter-spacing: 0.3px;
+        }
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .exp-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0b3b4b;
+        }
+        .exp-sub {
+            font-weight: 500;
+            color: #2c3e50;
+            font-style: italic;
+        }
+        .exp-date {
+            color: #4a627a;
+            font-weight: 500;
+            background-color: #e2eaf1;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .exp-desc {
+            list-style-type: disc;
+            padding-left: 22px;
+            margin-top: 10px;
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+        .exp-desc li {
+            margin-bottom: 6px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 30px;
+            margin-bottom: 15px;
+        }
+        .skill-cat {
+            background-color: #f5f8fb;
+            padding: 15px 18px;
+            border-radius: 8px;
+        }
+        .skill-cat h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e3c4f;
+            border-left: 4px solid #2c7da0;
+            padding-left: 10px;
+            margin-bottom: 12px;
+        }
+        .skill-items {
+            list-style-type: none;
+        }
+        .skill-items li {
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+            color: #2c3e50;
+        }
+        .skill-items li::before {
+            content: "•";
+            color: #2c7da0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .personal-qualities {
+            background-color: #f5f8fb;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0 25px 0;
+        }
+        .personal-qualities h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e3c4f;
+            margin-bottom: 12px;
+        }
+        .qualities-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 30px;
+            list-style-type: none;
+        }
+        .qualities-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2c3e50;
+        }
+        .qualities-list li::before {
+            content: "✓";
+            color: #2c7da0;
+            font-weight: bold;
+        }
+        .edu-item {
+            margin-bottom: 18px;
+            border-left: 2px solid #cbdbe9;
+            padding-left: 18px;
+        }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        .edu-title {
+            font-weight: 600;
+            font-size: 17px;
+            color: #0b3b4b;
+        }
+        .edu-school {
+            font-style: italic;
+            color: #3d5a73;
+        }
+        .edu-date {
+            color: #4a627a;
+            font-size: 14px;
+        }
+        .edu-grade {
+            color: #1e3c4f;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+        .cert-list {
+            list-style-type: none;
+        }
+        .cert-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #2c3e50;
+        }
+        .cert-list li::before {
+            content: "▹";
+            color: #2c7da0;
+            position: absolute;
+            left: 0;
+        }
+        .references {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            background-color: #f0f3f8;
+            padding: 18px 22px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+        .ref-item p {
+            margin-bottom: 3px;
+            color: #2c3e50;
+        }
+        .ref-name {
+            font-weight: 600;
+            color: #0b3b4b;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #d4dee8;
+            margin: 25px 0 10px 0;
+        }
+        .small-note {
+            font-size: 14px;
+            color: #5f6f82;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+            .resume { padding: 25px; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <h1>Mary Claire G. Angot</h1>
+        
+        <div class="contact-bar">
+            <div class="contact-item"><strong>Date of Birth:</strong> 24/03/2002</div>
+            <div class="contact-item"><strong>Address:</strong> Prk. Paraiso, Klinan 6, Polomolok, South Cotabato</div>
+            <div class="contact-item"><strong>Phone:</strong> +63 9566757502</div>
+            <div class="contact-item"><strong>Email:</strong> maryclairegabao@gmail.com</div>
+        </div>
+
+        <div class="summary">
+            Accounting graduate with experience in community finance as SK Treasurer and administrative support in a hospital setting. Proven ability to manage front desk operations, handle patient interactions, and maintain accurate records under pressure. Skilled in financial analysis, reporting, MS Office, and data management. Offers reliability, attention to detail, and adaptability for organizational success.
+        </div>
+
+        <!-- Experience -->
+        <div class="section-title">Experience</div>
+        
+        <!-- New Hospital Role -->
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Patient Services Coordinator</span>
+                <span class="exp-date">Jan 2025 – Feb 2026</span>
+            </div>
+            <div class="exp-sub">General Santos Doctors Hospital, General Santos City</div>
+            <ul class="exp-desc">
+                <li>Served as the first point of contact for patients, visitors, and medical staff, handling an average of 50+ daily inquiries with professionalism and empathy.</li>
+                <li>Managed patient registration, insurance verification, and appointment scheduling, ensuring 100% data accuracy and compliance with hospital policies.</li>
+                <li>Coordinated with doctors, nurses, and administrative departments to streamline patient flow, reducing average wait times by 15%.</li>
+                <li>Processed and organized confidential medical records and paperwork, maintaining strict adherence to data privacy regulations (e.g., RA 10173).</li>
+                <li>Assisted in training three new front desk hires on hospital procedures, software systems, and customer service protocols.</li>
+                <li>Adapted to flexible shifts including weekends and holidays, ensuring seamless 24/7 front desk coverage during peak periods.</li>
+                <li>Resolved patient complaints and urgent issues promptly, contributing to a 95% patient satisfaction rating in department surveys.</li>
+            </ul>
+        </div>
+
+        <!-- Previous SK Treasurer Role -->
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">SK Treasurer</span>
+                <span class="exp-date">11/2023</span>
+            </div>
+            <div class="exp-sub">Brgy. Klinan 6</div>
+            <ul class="exp-desc">
+                <li>Managed the full budget cycle for community projects, from planning and forecasting to expenditure tracking and compliance with financial regulations.</li>
+                <li>Negotiated contracts with vendors, securing cost-effective solutions for event supplies and services.</li>
+                <li>Recruited, onboarded, and supervised temporary staff for events, ensuring alignment with project goals and readiness for execution.</li>
+                <li>Oversaw event logistics, resolved operational issues in real time, and ensured seamless execution of activities.</li>
+                <li>Built strong relationships with stakeholders, balancing operational efficiency and financial prudence in all initiatives.</li>
+            </ul>
+        </div>
+
+        <!-- Key Skills (updated) -->
+        <div class="section-title">Key Skills</div>
+        <div class="skills-grid">
+            <div class="skill-cat">
+                <h3>Accounting & Financial Skills</h3>
+                <ul class="skill-items">
+                    <li>Financial analysis</li>
+                    <li>Budget management</li>
+                    <li>Financial reporting</li>
+                    <li>Cost tracking</li>
+                    <li>Financial record keeping</li>
+                    <li>Corperate bookkeeping</li>
+                </ul>
+            </div>
+            <div class="skill-cat">
+                <h3>Operations & Leadership</h3>
+                <ul class="skill-items">
+                    <li>Team leadership</li>
+                    <li>Event management</li>
+                    <li>Staff supervision</li>
+                    <li>Patient coordination</li>
+                    <li>Workflow coordination & optimization</li>
+                </ul>
+                <h3 style="margin-top: 12px;">Communication & Interpersonal</h3>
+                <ul class="skill-items">
+                    <li>Clear financial communication</li>
+                    <li>Stakeholder engagement</li>
+                    <li>Customer service excellence</li>
+                    <li>Insurance & patient liaison</li>
+                    <li>Conflict resolution</li>
+                </ul>
+            </div>
+            <div class="skill-cat" style="grid-column: span 2; display: flex; flex-wrap: wrap; gap: 30px;">
+                <div style="flex:1;">
+                    <h3>Technical & Professional Skills</h3>
+                    <ul class="skill-items">
+                        <li>MS Office (Word, Excel, PowerPoint)</li>
+                        <li>Data entry & database maintenance</li>
+                        <li>Electronic Medical Records (EMR)</li>
+                        <li>Problem‑solving & adaptability under pressure</li>
+                    </ul>
+                </div>
+                <div style="flex:1;">
+                    <h3>Administrative &  Office Management</h3>
+                    <ul class="skill-items">
+                        <li>Document processing & records management</li>
+                        <li>Confidentiality & regulatory compliance</li>
+                        <li>Multitasking in high‑volume environments</li>
+                        <li>Scheduling & appointment coordination</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Skills & Interests / Personal Qualities -->
+        <div class="section-title">Additional Skills & Interests</div>
+        <div class="personal-qualities">
+            <h3>Personal Qualities</h3>
+            <ul class="qualities-list">
+                <li>Reliable work ethic (100% attendance record)</li>
+                <li>Time management</li>
+                <li>Pressure management</li>
+                <li>Adaptability to flexible schedules</li>
+                <li>High attention to detail</li>
+            </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+            <div class="edu-header">
+                <span class="edu-title">Junior High School</span>
+                <span class="edu-date">06/2014 – 03/2018</span>
+            </div>
+            <div class="edu-school">Upper Klinan National High School</div>
+            <div class="edu-grade">Average grade: 91%</div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-header">
+                <span class="edu-title">Accountancy and Business Management</span>
+                <span class="edu-date">06/2018 – 03/2020</span>
+            </div>
+            <div class="edu-school">Notre Dame-Siena College of General Santos City</div>
+            <div class="edu-grade">93% with honors</div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-header">
+                <span class="edu-title">BSc Management Accounting (Hons)</span>
+                <span class="edu-date">06/2020 – 06/2024</span>
+            </div>
+            <div class="edu-school">GenSantos Foundation College</div>
+            <div class="edu-grade">2:1</div>
+        </div>
+
+        <!-- Certifications & Seminars -->
+        <div class="section-title">Certifications & Seminars</div>
+        <ul class="cert-list">
+            <li>FAR Review Lecture – Visayas School of Accountancy - Iloilo Review School by Arthur Rosada, CPA</li>
+            <li>RA No. 10963 – Tax Reform for Acceleration & Inclusion (TRAIN) Law – Jerich B. Solis, CPA</li>
+            <li>SK Bookkeeping Training Region 12</li>
+            <li>Seminar Training and Workshop for Plans and Financial Transaction of Sangguniang Kabataan</li>
+            <li>Seminar on the Handbook on the Financial Transaction for Sangguniang Kabataan – COA REGION XII</li>
+        </ul>
+
+        <!-- References -->
+        <div class="section-title">References</div>
+        <div class="references">
+            <div class="ref-item">
+                <p class="ref-name">Marilyn L. Delfin</p>
+                <p>Master Teacher - Retired @ UKNHS (Polomolok)</p>
+                <p>07456 926391</p>
+            </div>
+            <div class="ref-item">
+                <p class="ref-name">Mary Ann F. Bajar</p>
+                <p>MT- Assistant Principal Teacher @ PNHS KIS (Polomolok)</p>
+                <!-- No phone -->
+            </div>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
